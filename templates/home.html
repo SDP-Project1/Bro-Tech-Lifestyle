@@ -1,0 +1,207 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<div id="carouselExampleIndicators" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <video class="d-block w-100 banner" id="video1" preload="auto" autoplay="autoplay" loop="loop">
+                <source src="{% static './images/video.mp4' %}" type="video/mp4">
+              </video>
+        </div>
+        <div class="carousel-item ">
+            <a href="/store/category/headphones/bro-tech-immortal-1300/" target="_blank"><img class="d-block w-100 banner " src="{% static './images/1.png' %}" alt="Second slide "></a>
+
+        </div>
+        <div class="carousel-item ">
+            <a href="/store/category/headphones/bro-tech-immortal-700/" target="_blank"><img class="d-block w-100 banner " src="{% static './images/2.png' %}" alt="Second slide "></a>
+        </div>
+        <div class="carousel-item ">
+            <a href="/store/category/earphones/bro-tech-basshead-110/" target="_blank"><img class="d-block w-100 banner " src="{% static './images/3.png' %}" alt="Second slide "></a>
+        </div>
+        <div class="carousel-item ">
+            <a href="/store/category/earbuds/bro-tech-airdbuds-402-wireless/" target="_blank"><img class="d-block w-100 banner " src="{% static './images/4.png' %}" alt="Second slide "></a>
+        </div>
+        <div class="carousel-item ">
+            <a href="/store/category/speakers/brotech-bt-220-bluetooth-speaker/" target="_blank"><img class="d-block w-100 banner " src="{% static './images/5.png' %}" alt="Second slide "></a>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" style="color:blue;"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="products" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+    <br><br>
+    <marquee>
+        <span class="tagline1">Listen to what you love</span> <span class="tagline">Listen to what you love</span> <span class="tagline1">Listen to what you love</span> <span class="tagline">Listen to what you love</span> <span class="tagline1">Listen to what you love</span>        <span class="tagline">Listen to what you love</span> <span class="tagline1">Listen to what you love</span> <span class="tagline">Listen to what you love</span>
+    </marquee>
+    <br><br>
+
+    <h2 class="heading" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Our Products</h2>
+    <br>
+
+
+
+    <div class="container blogcontainer">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-xl-4 col-sm-4 col-sm-6 ">
+                <div class="card" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <div class="card-header">
+                        <a href="{{ product.get_url}}"><img class="card-img-top" src="{{ product.images.url }}" alt="Card image cap" height="300"></a>
+                    </div>
+                    <div class="card-body">
+                        <a href="{{ product.get_url}}">
+                            <h5 class="card-title">{{ product.product_name }}</h5>
+                        </a>
+
+                        <h4>₹{{ product.price }} <span class="discount"><strike >₹{{ product.original_price }}</strike></span> </h4>
+                       
+                        <div class="rating-star">
+                            <span>
+                                <i class="fa fa-star{% if product.averageReview < 0.5 %}-o{% elif product.averageReview >= 0.5 and product.averageReview < 1 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                <i class="fa fa-star{% if product.averageReview < 1.5 %}-o{% elif product.averageReview >= 1.5 and product.averageReview < 2 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                <i class="fa fa-star{% if product.averageReview < 2.5 %}-o{% elif product.averageReview >= 2.5 and product.averageReview < 3 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                <i class="fa fa-star{% if product.averageReview < 3.5 %}-o{% elif product.averageReview >= 3.5 and product.averageReview < 4 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                <i class="fa fa-star{% if product.averageReview < 4.5 %}-o{% elif product.averageReview >= 4.5 and product.averageReview < 5 %}-half-o {% endif %}" aria-hidden="true"></i>
+                                </span>
+                        </div>
+                       
+                        <ul class="card-text list">
+                            <li>{{ product.description_1 }}</li>
+                            <li>{{ product.description_2 }}</li>
+                            <li>{{ product.description_3 }}</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        {% if product.stock <= 0 %} 
+                        <h5 class="text-danger">Out of stock</h5>
+                     {% else %}
+                        <a href="{% url 'add_cart' product.id %}" class="btn  btn-sm cart">Add to Cart</a>
+
+                     {% endif %}
+                    </div>
+                </div>
+                <br><br>
+            </div>
+            {% endfor %}
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <br><br>
+
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+<div class="jumbotron">
+
+    <h2 class="blog" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">Bro-Tech Blogs</h2>
+    <br>
+    <div class="container blogcontainer">
+        <div class="card-deck">
+            <div class="card" data-aos="fade-right" data-aos-duration="1200">
+                <img class="card-img-top blogheader" src="{% static './images/blog1.jpg' %}" alt="Card image cap">
+                <div class="card-body blogbody">
+                    <a href="#" target="_blank" class="bloglink">
+                        <h5 class="card-title blogtitle">Earphones Buying Guide - Everything You Need To Know</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-right" data-aos-duration="1200">
+                <img class="card-img-top blogheader" src="{% static './images/blog2.jpg' %}" alt="Card image cap">
+                <div class="card-body blogbody">
+                    <a href="#" target="_blank" class="bloglink">
+                        <h5 class="card-title blogtitle">The Ultimate Smartwatch Guide - Get The World On Your Wrist</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-right" data-aos-duration="1200">
+                <img class="card-img-top blogheader" src="{% static './images/blog2.jpg' %}" alt="Card image cap">
+                <div class="card-body blogbody">
+                    <a href="#" target="_blank" class="bloglink">
+                        <h5 class="card-title blogtitle">Waack it up the Street Style Way!</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <h4 style="text-align:center;"> <a type="button" class="btn btn-sm explore" href="#">
+            Explore More
+         </a></h4>
+    </div>
+</div>
+
+<div class="jumbotron trust">
+    <h2 class="heading" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">We Ensure and Provide</h2>
+    <br>
+    <div class="container">
+        <div class="row mt-5 mb-5 ">
+            <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta trusticon" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <div class="cta-text trusttext">
+                        <h3>Free Shipping</h3>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta trusticon" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <i class="fa-solid fa-percent"></i>
+                    <div class="cta-text trusttext">
+                        <h3>Exclusive deals</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-4 mb-30">
+                <div class="single-cta trusticon" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <div class="cta-text trusttext">
+                        <h3>Secure Payments</h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron trustus" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <div class="container">
+        <p class="trustspan">India's fastest growing audio & wearables brand. The most incredible range of wireless earphones, earbuds, headphones, smart watches, and home audio. <span>From workouts to adventures, Bro-Tech got all of it covered !!!</span></p>
+    </div>
+</div>
+
+
+
+{% endblock %}

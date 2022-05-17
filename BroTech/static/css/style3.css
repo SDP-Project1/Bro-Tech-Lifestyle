@@ -1,0 +1,129 @@
+@keyframes slideInRight {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInRight;
+    background-color: black;
+}
+
+.logobrand {
+    margin-left: 40px;
+}
+
+.logo {
+    height: 90px;
+    width: auto;
+}
+
+.logo:hover,
+.logo:visited {
+    transform: scale(1.2);
+    transition: transform 2s;
+}
+
+.navitems {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.navitems:hover,
+.navitems:visited {
+    font-size: 23px;
+    border-bottom: 2px solid transparent;
+    padding: 8px 0px;
+    transition: border-bottom 0.2s;
+}
+
+.navitems:hover,
+.navitems:visited {
+    border-bottom: 2px solid #0197d6;
+}
+
+.dropitems {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.dropmenu {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bolder;
+    width: 300px;
+}
+
+.dropdownitems {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.dropdownitems:hover,
+.dropdownitems:visited {
+    font-size: 23px;
+    border-bottom: 2px solid transparent;
+    padding: 8px 0px;
+    background-color: white;
+    color: black;
+    transition: border-bottom 2s;
+}
+
+.dropdownitems:hover,
+.dropdownitems:visited {
+    border-bottom: 2px solid black;
+}
+
+form {
+    margin-left: 40px;
+}
+
+.search {
+    margin-left: -50px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.search:hover {
+    opacity: 1;
+}
+
+.search:focus,
+.searchbar:focus {
+    box-shadow: 0 0 3px 0 #1183d6;
+    border-color: #1183d6;
+    outline: none;
+}
+
+.welcome {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.cartbtn {
+    margin-left: 20px;
+    background-color: grey;
+    opacity: 0.7;
+}
+
+.cartbtn:hover,
+.cartbtn:visited {
+    color: #1183d6;
+    background-color: white;
+}

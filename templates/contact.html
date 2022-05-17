@@ -1,0 +1,80 @@
+{% extends 'base3.html' %} {% block content %} {% load static %}
+   
+<section class="section-content padding-y bg" style="background-color:#212529;animation-duration: 1s; animation-timing-function: ease-in-out; animation-delay: 0s;
+animation-iteration-count: 1;animation-name: slideInRight; ">
+<div class="container contcon">
+      <div class="form contactform">
+        <div class="contact-info">
+          <h3 class="title"><b>Contact Us</b></h3>
+          <p class="text">
+            <b>
+           Any Queries,don't hesitate. Just ping us through this form.
+            </b>
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="{% static 'images/location.png' %}" class="icons" alt="" />
+              <p><b>Banglore</b></p>
+            </div>
+            <div class="information">
+              <img src="{% static 'images/email.png' %}" class="icons" alt="" />
+              <p><b>brotechlifestyle@gmail.com</b></p>
+            </div>
+            <div class="information">
+              <img src="{% static 'images/phone.png' %}" class="icons" alt="" />
+              <p><b>+91 8431121609</b></p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p><b>Connect with us :</b></p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+
+
+          <form class="contform" action="index.html" autocomplete="off">
+            <h3 class="title"><b>Contact us</b></h3>
+            <div class="input-container">
+              <input  type="text" name="name" class="input" required/>
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input  type="email" name="email" class="input" required />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input  type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input" required ></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <button type="submit" value="Send" class="btn contbtn"><b>Send</b></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

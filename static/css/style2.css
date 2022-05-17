@@ -1,0 +1,244 @@
+            .footerul {
+                margin: 0px;
+                padding: 0px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            
+            .footerul2 {
+                margin: 0px;
+                padding: 0px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+            
+            .footer-section {
+                background-color: black;
+            }
+            
+            .footer-cta {
+                border-bottom: 1px solid white;
+            }
+            
+            .single-cta i {
+                background-color: #fff;
+                color: #2E2E2E;
+                font-size: 20px;
+                float: left;
+                border-radius: 50%;
+                margin-top: 8px;
+                padding: 5px;
+            }
+            
+            .single-cta ion-icon {
+                background-color: #fff;
+                color: #2E2E2E;
+                font-size: 20px;
+                float: left;
+                border-radius: 50%;
+                margin-top: 8px;
+                padding: 5px;
+            }
+            
+            .single-cta ion-icon:hover,
+            .single-cta ion-icon:visited {
+                background-color: black;
+                color: white;
+                transform: scale(1.2);
+                transition: transform 2s;
+            }
+            
+            .single-cta i:hover,
+            .single-cta i:visited {
+                background-color: black;
+                color: white;
+                transform: scale(1.2);
+                transition: transform 2s;
+            }
+            
+            .cta-text {
+                padding-left: 15px;
+                display: inline-block;
+            }
+            
+            .cta-text h4 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 2px;
+            }
+            
+            .cta-text span {
+                color: #0197d6;
+                font-size: 15px;
+                font-weight: bolder;
+            }
+            
+            .footer-content {
+                position: relative;
+                z-index: 2;
+            }
+            
+            .footer-pattern img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 330px;
+                background-size: cover;
+                background-position: 100% 100%;
+            }
+            
+            .footer-logo {
+                margin-bottom: 30px;
+            }
+            
+            .footer-logo img {
+                max-width: 200px;
+            }
+            
+            .footer-text p {
+                margin-bottom: 14px;
+                font-size: 14px;
+                color: #0197d6;
+                font-weight: bolder;
+                line-height: 28px;
+            }
+            
+            .footer-social-icon span {
+                color: #fff;
+                display: block;
+                font-size: 20px;
+                font-weight: 700;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 20px;
+            }
+            
+            .footer-social-icon a {
+                color: #fff;
+                font-size: 16px;
+                margin-right: 15px;
+            }
+            
+            .footer-social-icon i {
+                height: 40px;
+                width: 40px;
+                text-align: center;
+                line-height: 38px;
+                border-radius: 50%;
+            }
+            
+            .facebook-bg {
+                background: #3B5998;
+            }
+            
+            .twitter-bg {
+                background: #55ACEE;
+            }
+            
+            .google-bg {
+                background: #DD4B39;
+            }
+            
+            .footer-widget-heading h3 {
+                color: #fff;
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 40px;
+                position: relative;
+            }
+            
+            .footer-widget-heading h3::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -15px;
+                height: 2px;
+                width: 50px;
+                background: red;
+            }
+            
+            .footer-widget ul li {
+                display: inline-block;
+                width: 50%;
+                margin-bottom: 12px;
+            }
+            
+            .footer-widget ul li a:hover {
+                color: red;
+            }
+            
+            .footer-widget ul li a {
+                color: #0197d6;
+                font-weight: bolder;
+                text-transform: capitalize;
+            }
+            
+            .subscribe-form {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .subscribe-form input {
+                width: 100%;
+                padding: 14px 28px;
+                background: #2E2E2E;
+                border: 1px solid #2E2E2E;
+                color: #fff;
+                margin-left: -40px;
+            }
+            
+            .subscribe-form button {
+                position: absolute;
+                right: 0;
+                background: #2E2E2E;
+                padding: 13px 20px;
+                border: 1px solid #2E2E2E;
+                top: 0;
+            }
+            
+            .subscribe-form button i {
+                color: #fff;
+                font-size: 24px;
+                transform: rotate(-6deg);
+            }
+            
+            .subscribe-form button i:hover {
+                color: grey;
+                font-size: 24px;
+                transform: rotate(-6deg);
+            }
+            
+            .copyright-area {
+                padding: 25px 0;
+            }
+            
+            .copyright-text p {
+                margin: 0;
+                font-size: 14px;
+                color: #0197d6;
+                font-weight: bolder;
+            }
+            
+            .copyright-text p a {
+                color: #0197d6;
+            }
+            
+            .footermenu li {
+                display: inline-block;
+                margin-left: 10px;
+            }
+            
+            li .shop {
+                font-size: 14px;
+                font-weight: bolder;
+            }
+            
+            .footermenu li:hover a {
+                color: red;
+            }
+            
+            .footermenu li a {
+                font-size: 14px;
+                color: white;
+                font-weight: bold;
+            }
